@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTT Platform Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="content-container">
+    <button class="menu-btn" onclick="toggleSidebar()">&#9776;</button>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#home"><span class="menu-symbol">&#x1F3E0;</span> Home</a></li>
+            <li>
+                <a href="#movies"><span class="menu-symbol">&#x1F3AC;</span> Movies</a>
+                <ul>
+                    <li><a href="#trending-movies">Trending movies</a></li>
+                    <li><a href="#trending-series">New movies</a></li>
+                    <li><a href="#old-series">Old movies</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#series"><span class="menu-symbol">&#x1F4FA;</span> Series</a>
+                <ul>
+                    <li><a href="#trending-movies">Trending Series</a></li>
+                    <li><a href="#trending-series">New Series</a></li>
+                    <li><a href="#old-series">Old Series</a></li>
+                </ul>
+            </li>
+        </ul>
+        <button onclick="toggleBrightness()">Toggle Brightness</button>
+        <ul>
+            <li><a href="#login"><span class="menu-symbol">&#x1F511;</span> Login</a></li>
+        </ul>
+    </div>
+
+    <h1><center> MOVIE HUB</center></h1>
+
+    <header>
+        <center>  
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchContent()">Search</button>
+        </center>
+    </header>
+
+    <main>
+        <center>
+            <section class="trending" id="trending-movies">
+                <h2>Trending Movies</h2>
+                <div class="movie-container">
+                    <!-- Trending movies will be dynamically populated here -->
+                </div>
+            </section>
+            <section class="trending" id="trending-series">
+                <h2>Recommended Content</h2>
+                <div class="series-container">
+                    <!-- Trending series will be dynamically populated here -->
+                </div>
+            </section>
+            <section class="old-series" id="old-series">
+                <h2>Trending Series</h2>
+                <div class="series-container">
+                    <!-- Old series will be dynamically populated here -->
+                </div>
+            </section>
+        </center>
+    </main>
+
+    <hr>
+    
+    <div id="infoDisplay"></div>
+    <img id="imageDisplay" style="display: block; margin: auto; max-width: 80%;" />
+
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
